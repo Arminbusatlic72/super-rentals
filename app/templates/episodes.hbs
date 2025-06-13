@@ -1,0 +1,10 @@
+{{page-title "Episodes"}}
+{{#each this.model as |episode|}}
+  <div class="episode">
+    <h2>{{episode.title}}</h2>
+    {{!-- <p>{{episode.description}}</p> --}}
+    {{!-- <p>Air Date: {{episode.airDate}}</p> --}}
+  </div>
+{{/each}}
+
+{{! The following component displays Ember's default welcome message. }}
