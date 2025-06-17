@@ -1,1 +1,14 @@
-{{yield}}
+<div>
+  {{#if @episode.guest.image}}
+    <img src="{{@episode.guest.image}}" alt="{{@episode.title}}" width="300" />
+  {{/if}}
+
+  <h3>{{@episode.title}}</h3>
+  <p>{{@episode.description}}</p>
+  <pre>{{@episode}}</pre>
+  <pre>{{this.episode.guest}}</pre>
+  <p>Episode: {{@episode.title}}</p>
+  <p>Description: {{@episode.description}}</p>
+  <p>Guest: {{@episode.guest.name}}</p>
+  <p>Image URL: {{@episode.guest.image}}</p>
+</div>

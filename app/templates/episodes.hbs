@@ -1,10 +1,19 @@
+{{outlet}}
+
+{{! This is a comment in Handlebars. It will not be rendered in the final HTML. }}
+
+{{! The following line sets the page title for this template. }}
 {{page-title "Episodes"}}
+
 {{#each this.model as |episode|}}
-  <div class="episode">
-    <h2>{{episode.title}}</h2>
-    {{!-- <p>{{episode.description}}</p> --}}
-    {{!-- <p>Air Date: {{episode.airDate}}</p> --}}
-  </div>
+  {{! <div class="episode"> }}
+  {{!-- <h2>{{episode.title}}</h2> --}}
+  {{!-- <p>{{episode.description}}</p> --}}
+  {{!-- <p>Air Date: {{episode.airDate}}</p> --}}
+  {{! </div> }}
+  <LinkTo @route="episodes.episode" @model={{episode.slug}}>
+    <Episode @episode={{episode}} />
+  </LinkTo>
 {{/each}}
 
 {{! The following component displays Ember's default welcome message. }}
